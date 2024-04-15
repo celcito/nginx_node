@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/celcito/nginx_node/issues"
   },
-  "homepage": "https://github.com/celcito/nginx_node#readme"
+  "homepage": "https://github.com/celcito/nginx_node#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
