@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # run npm install in our local machine
-RUN npm install && npm install -g npm@10.5.2
+RUN npm install
 
 # copy the generated modules and all other files to the container
 COPY . .
