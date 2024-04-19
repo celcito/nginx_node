@@ -21,10 +21,10 @@ Este repositório é dedicado ao estudo e desenvolvimento de uma aplicação web
    ## Rotas da Aplicação
 
 - **Inserir Dados**:
- Acesse `http://localhost:5000/insert` para inserir novos registros na tabela `people`.
+ Acesse `http://localhost:8080/insert` para inserir novos registros na tabela `people`.
 
 - **Consultar Dados**:
- Acesse `http://localhost:5000/` para visualizar os registros existentes na tabela `people`.
+ Acesse `http://localhost:8080/` para visualizar os registros existentes na tabela `people`.
 
 ## Estrutura do Projeto
 
