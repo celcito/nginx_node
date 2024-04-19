@@ -4,7 +4,7 @@ services:
         build:
             context: ./app
         ports:
-            - "5000:5000"
+            - "8080:8080"
         networks: 
             - node-network
         depends_on: 
@@ -15,7 +15,7 @@ services:
         build:
             context: ./nginx
         ports:
-            - "8080:8080"
+            - "8081:8081"
 
     db:
         image: mysql:5.7
