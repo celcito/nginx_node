@@ -16,16 +16,7 @@ const pool = mysql.createPool({
 });
 
 
-
-
-
-
 const connection = mysql.createConnection(config)
-
-
-
-
-
 
 app.get('/insert', (req, res) => {
   
