@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS `nodedb`.`people` (`id` int(11) NOT NULL AUTO_INCREMENT,`name` varchar(255) DEFAULT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `nodedb`.`people` (`id`, `name`) VALUES (1, 'Wesley'),(2, 'Celso'),(3, 'Wesley');

@@ -25,6 +25,10 @@ services:
         tty: true
         volumes: 
             - ./mysql:/var/lib/mysql
+            - ./entrypoint.sh:/docker-entrypoint-initdb.d/entrypoint.sh
+            - ./people.sql:/docker-entrypoint-initdb.d/people.sql
+            - ./log:/var/log
+            
         environment: 
             - MYSQL_DATABASE=nodedb
             - MYSQL_ROOT_PASSWORD=root
