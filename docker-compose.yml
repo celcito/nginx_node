@@ -2,11 +2,17 @@ version: "3.8"
 services:
     nodeserver:
         build:
-            context: ./app
+            context: app
+        
+        command: ["dockerize", "-wait", "tcp://db:3306", "-timeout", "30s", "node", "index.js"]    
+        container_name: app
         ports:
             - "8080:8080"
         networks: 
             - node-network
+        volumes: 
+            - ./app:/./app
+
         depends_on: 
             - db
         
@@ -20,13 +26,12 @@ services:
     db:
         image: mysql:5.7
         command: --innodb-use-native-aio=0
+    
         container_name: db
         restart: always
         tty: true
         volumes: 
             - ./mysql:/var/lib/mysql
-            - ./entrypoint.sh:/docker-entrypoint-initdb.d/entrypoint.sh
-            - ./people.sql:/docker-entrypoint-initdb.d/people.sql
             - ./log:/var/log
             
         environment: 
