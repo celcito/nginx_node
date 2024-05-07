@@ -1,6 +1,6 @@
 # Projeto de Estudo com Docker Compose, Nginx, Node.js e MySQL
 
-Este repositório é dedicado ao estudo e desenvolvimento de uma aplicação web simples, utilizando Docker Compose para orquestrar serviços de Nginx, Node.js e MySQL. O objetivo é explorar a configuração de um ambiente de desenvolvimento robusto e escalável, com Nginx atuando como um proxy reverso na porta 5000.
+Este repositório é dedicado ao estudo e desenvolvimento de uma aplicação web simples, utilizando Docker Compose para orquestrar serviços de Nginx, Node.js e MySQL. O objetivo é explorar a configuração de um ambiente de desenvolvimento robusto e escalável, com Nginx atuando como um proxy reverso na porta 8081.
 
 ## Tecnologias Utilizadas
 
@@ -19,9 +19,6 @@ Este repositório é dedicado ao estudo e desenvolvimento de uma aplicação web
    docker-compose up --build
 
    ## Rotas da Aplicação
-
-- **Inserir Dados**:
- Acesse `http://localhost:8080/insert` para inserir novos registros na tabela `people`.
 
 - **Consultar Dados**:
  Acesse `http://localhost:8080/` para visualizar os registros existentes na tabela `people`.
