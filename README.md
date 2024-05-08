@@ -16,7 +16,7 @@ Este repositório é dedicado ao estudo e desenvolvimento de uma aplicação web
 
 2. **Executar o Docker Compose**:
    Navegue até o diretório do projeto e execute o seguinte comando para construir e iniciar os containers:
-   docker-compose up --build
+   docker-compose up -d
 
    ## Rotas da Aplicação
 
