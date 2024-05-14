@@ -22,6 +22,8 @@ services:
             context: ./nginx
         ports:
             - "8081:8081"
+        networks: 
+            - node-network
 
     db:
         image: mysql:5.7
