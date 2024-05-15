@@ -21,7 +21,7 @@ Este repositório é dedicado ao estudo e desenvolvimento de uma aplicação web
    ## Rotas da Aplicação
 
 - **Consultar Dados**:
- Acesse `http://localhost:8080/` para visualizar os registros existentes na tabela `people`.
+ Acesse `http://localhost` para visualizar os registros existentes na tabela `people`.
 
 ## Estrutura do Projeto
 
