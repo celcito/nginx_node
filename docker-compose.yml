@@ -3,46 +3,44 @@ services:
     nodeserver:
         build:
             context: app
-        
-        command: ["dockerize", "-wait", "tcp://db:3306", "-timeout", "30s", "node", "index.js"]    
+        command: ["dockerize", "-wait", "tcp://db:3306", "-timeout", "30s", "node", "index.js"]
         container_name: app
         ports:
             - "8080:8080"
-        networks: 
+        networks:
             - node-network
-        volumes: 
+        volumes:
             - ./app:/usr/src/app
             - /usr/src/app/node_modules
-        depends_on: 
+        depends_on:
             - db
-        
     nginx:
         restart: always
         build:
             context: ./nginx
         ports:
             - "80:80"
-        networks: 
+        networks:
             - node-network
+        depends_on:
+            - nodeserver
 
     db:
         image: mysql:5.7
         command: --innodb-use-native-aio=0
-    
         container_name: db
         restart: always
         tty: true
-        volumes: 
+        volumes:
             - ./mysql:/var/lib/mysql
             - ./log:/var/log
-            
-        environment: 
+        environment:
             - MYSQL_DATABASE=nodedb
             - MYSQL_ROOT_PASSWORD=root
-        networks: 
+        networks:
            - node-network
 
-networks: 
+networks:
     node-network:
         driver: bridge
 
